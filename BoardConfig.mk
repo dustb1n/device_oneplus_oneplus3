@@ -73,6 +73,10 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/kazari
 TARGET_KERNEL_CONFIG := kazari_op3_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
