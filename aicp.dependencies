@@ -1,13 +1,13 @@
 [
  {
-   "repository": "AICP/device_oppo_common",
+   "repository": "mordiford/device_oppo_common",
    "target_path": "device/oppo/common",
     "branch":      "n7.1"
  },
  {
    "repository": "mordiford/kazari-op3-kernel",
    "target_path": "kernel/oneplus/kazari",
-    "branch":      "kazari-v2"
+    "branch":      "kazari-v3"
  },
  {
    "repository": "LineageOS/android_vendor_nxp-nfc_opensource_frameworks",
