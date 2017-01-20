@@ -20,10 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from oneplus3 device
 $(call inherit-product, device/oneplus/oneplus3/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/configs/common.mk)
 
-PRODUCT_NAME := lineage_oneplus3
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
+
+PRODUCT_NAME := aicp_oneplus3
 PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -33,3 +36,12 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 TARGET_VENDOR_PRODUCT_NAME := OnePlus3
 
 TARGET_VENDOR := oneplus
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+        DEVICE_MAINTAINERS="lindwurm"
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+-include vendor/aicp/configs/bootanimation.mk
