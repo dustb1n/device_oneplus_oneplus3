@@ -109,7 +109,7 @@ void vendor_load_properties() {
     char rf_version[PROP_VALUE_MAX];
     int rc;
 
-    rc = property_get("ro.rr.device", device, NULL);
+    rc = property_get("ro.aicp.device", device, NULL);
     if (!rc || strncmp(device, "oneplus3", PROP_VALUE_MAX))
         return;
 
@@ -117,16 +117,19 @@ void vendor_load_properties() {
 
     if (strstr(rf_version, "11") || strstr(rf_version, "31")) {
         /* Chinese/America */
-        load_op3("ONEPLUS A3000");
+        load_op3("A3000");
     } else if (strstr(rf_version, "21")) {
         /* Asia/Europe */
-        load_op3("ONEPLUS A3003");
-    } else if (strstr(rf_version, "12") || strstr(rf_version, "32")) {
-        /* Chinese/America */
-        load_op3t("ONEPLUS A3000");
+        load_op3("A3003");
+    } else if (strstr(rf_version, "12")) {
+        /* Chinese */
+        load_op3t("A3010");
+    } else if (strstr(rf_version, "32")) {
+        /* America */
+        load_op3t("A3000");
     } else if (strstr(rf_version, "22")) {
         /* Asia/Europe */
-        load_op3t("ONEPLUS A3003");
+        load_op3t("A3003");
     }
 
     init_alarm_boot_properties();
