@@ -117,19 +117,19 @@ void vendor_load_properties() {
 
     if (strstr(rf_version, "11") || strstr(rf_version, "31")) {
         /* Chinese/America */
-        load_op3("ONEPLUS A3000");
+        load_op3("A3000");
     } else if (strstr(rf_version, "21")) {
         /* Asia/Europe */
-        load_op3("ONEPLUS A3003");
+        load_op3("A3003");
     } else if (strstr(rf_version, "12")) {
         /* Chinese */
-        load_op3t("ONEPLUS A3010");
+        load_op3t("A3010");
     } else if (strstr(rf_version, "32")) {
         /* America */
-        load_op3t("ONEPLUS A3000");
+        load_op3t("A3000");
     } else if (strstr(rf_version, "22")) {
         /* Asia/Europe */
-        load_op3t("ONEPLUS A3003");
+        load_op3t("A3003");
     }
 
     init_alarm_boot_properties();
